@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
-          command: sudo chmod +x ./gradle/wrapper
+          command: sudo chmod +x ./wrapper
       - run:
           name: Download Dependencies
           command: ./gradle/wrapper androidDependencies
