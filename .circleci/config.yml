@@ -1,6 +1,6 @@
 version: 2
-# general:
-#   build_dir:/android/
+general:
+  build_dir:/android/
 jobs:
   build:
     docker:
