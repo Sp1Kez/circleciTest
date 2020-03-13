@@ -1,4 +1,6 @@
 version: 2
+general:
+  build_dir:/BarcodeReaderSample-master/
 jobs:
   build:
     docker:
