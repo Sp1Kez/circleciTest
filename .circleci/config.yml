@@ -1,6 +1,6 @@
 version: 2
-general:
-  build_dir:/android/
+# general:
+#   build_dir:/android/
 jobs:
   build:
     docker:
@@ -9,6 +9,9 @@ jobs:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout
+      - run:
+        name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
+        command: sudo chmod +x ./gradlew
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
